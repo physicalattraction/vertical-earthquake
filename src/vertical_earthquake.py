@@ -15,7 +15,7 @@ MAX_FIRST_ANGLE = cmath.pi / 4  # 45 degrees
 MAX_DEVIATION_FROM_PERPENDICULAR = cmath.pi / 4  # 30 degrees
 MAX_DEVIATION_FROM_GOING_RIGHT = 2 * cmath.pi / 3  # 120 degrees
 
-NR_MIRROR_LINES = 16
+NR_MIRROR_LINES = 64
 END_ANGLE_MIRROR_LINES = 2 * cmath.pi / 3
 FAT_WIDTH = 10
 THIN_WIDTH = 1
