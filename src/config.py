@@ -5,7 +5,7 @@ Module with all drawing configuration
 import cmath
 
 # Number of segments in the metal ruler
-NR_SEGMENTS = 16
+NR_SEGMENTS = 24
 
 # Minimum segment length in pixels
 MIN_SEGMENT_LENGTH = 20

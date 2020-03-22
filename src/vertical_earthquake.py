@@ -149,4 +149,4 @@ class VerticalEarthquake:
 
 
 if __name__ == '__main__':
-    VerticalEarthquake.draw_multiple_quakes(10)
+    VerticalEarthquake.draw_multiple_quakes(1)
