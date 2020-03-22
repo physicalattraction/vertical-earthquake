@@ -61,6 +61,3 @@ target/
 
 # PyCharm files
 .idea
-
-# Secrets file
-secrets.json
