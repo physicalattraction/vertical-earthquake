@@ -9,3 +9,5 @@ The code in this repository creates similar earthquake patterns. The metal ruler
 
 ![Vertical Earthquake 01](readme_data/VerticalEarthquake01.png)
 ![Vertical Earthquake 02](readme_data/VerticalEarthquake02.png)
+
+Running the code requires Python 3.6 or up.
