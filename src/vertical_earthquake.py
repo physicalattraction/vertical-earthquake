@@ -1,4 +1,3 @@
-import cmath
 import os.path
 import random
 from datetime import datetime
@@ -7,18 +6,7 @@ from typing import List
 
 from PIL import Image, ImageDraw
 
-NR_SEGMENTS = 16
-MIN_SEGMENT_LENGTH = 20  # Minimum segment length in pixels
-MAX_SEGMENT_LENGTH = 100  # Maximum segment length in pixels
-
-MAX_FIRST_ANGLE = cmath.pi / 4  # 45 degrees
-MAX_DEVIATION_FROM_PERPENDICULAR = cmath.pi / 4  # 30 degrees
-MAX_DEVIATION_FROM_GOING_RIGHT = 2 * cmath.pi / 3  # 120 degrees
-
-NR_MIRROR_LINES = 64
-END_ANGLE_MIRROR_LINES = 2 * cmath.pi / 3
-FAT_WIDTH = 10
-THIN_WIDTH = 1
+from config import *
 
 
 def now() -> str:
@@ -33,6 +21,11 @@ class VerticalEarthquake:
     src_dir = os.path.dirname(__file__)
     root_dir = os.path.dirname(src_dir)
     img_dir = os.path.join(root_dir, 'img')
+
+    width: int
+    height: int
+    img: Image
+    draw: ImageDraw
 
     def __init__(self):
         self.width = 2000
@@ -82,6 +75,10 @@ class VerticalEarthquake:
             self._draw_line_segments(nodes, width)
 
     def save_img(self):
+        """
+        Save the image to the image directory with a predefined filename, based on the current timestamp
+        """
+
         self.img = self.img.rotate(270)
         filename = f'amorales_{now()}.png'
         full_path = os.path.join(self.img_dir, filename)
